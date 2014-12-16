@@ -1,0 +1,181 @@
+CREATE DATABASE `mydb` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+CREATE TABLE `person` (
+  `firstName` varchar(45) DEFAULT NULL,
+  `lastName` varchar(45) DEFAULT NULL,
+  `blocked` tinyint(1) DEFAULT NULL,
+  `admin` tinyint(1) DEFAULT NULL,
+  `emailAddress` varchar(45) NOT NULL,
+  PRIMARY KEY (`emailAddress`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `mydb`.`person`
+(`firstName`,
+`lastName`,
+`blocked`,
+`admin`,
+`emailAddress`)
+VALUES
+('Eline', 'Pluk', '0', '1', 'EP@webmail.com');
+
+INSERT INTO `mydb`.`person`
+(`firstName`,
+`lastName`,
+`blocked`,
+`admin`,
+`emailAddress`)
+VALUES
+('Kees', 'van den Berg', '1', '0', 'KvdB@webmail.com');
+
+INSERT INTO `mydb`.`person`
+(`firstName`,
+`lastName`,
+`blocked`,
+`admin`,
+`emailAddress`)
+VALUES
+('Truus', 'van de Bovenkamp', '0', '0', 'Truus@webmail.com');
+
+CREATE TABLE `seller` (
+  `firstName` varchar(45) DEFAULT NULL,
+  `lastName` varchar(45) DEFAULT NULL,
+  `blocked` tinyint(1) DEFAULT NULL,
+  `emailAddress` varchar(45) NOT NULL,
+  PRIMARY KEY (`emailAddress`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `mydb`.`seller`
+(`firstName`,
+`lastName`,
+`blocked`,
+`emailAddress`)
+VALUES
+('Wim', 'van den Heuvel', '1', 'heuffie@webmail.com');
+
+INSERT INTO `mydb`.`seller`
+(`firstName`,
+`lastName`,
+`blocked`,
+`emailAddress`)
+VALUES
+('Jan', 'Pietersen', '0', 'JP@webmail.com');
+
+INSERT INTO `mydb`.`seller`
+(`firstName`,
+`lastName`,
+`blocked`,
+`emailAddress`)
+VALUES
+('Klaas', 'van den Berg', '0', 'KvdB@webmail.com');
+
+INSERT INTO `mydb`.`seller`
+(`firstName`,
+`lastName`,
+`blocked`,
+`emailAddress`)
+VALUES
+('Laura', 'van den Heuvel', '0', 'LA@webmail.com');
+
+INSERT INTO `mydb`.`seller`
+(`firstName`,
+`lastName`,
+`blocked`,
+`emailAddress`)
+VALUES
+('Martijn', 'van den Heuvel', '1', 'MVDH@webmail.com');
+
+INSERT INTO `mydb`.`seller`
+(`firstName`,
+`lastName`,
+`blocked`,
+`emailAddress`)
+VALUES
+('Piet', 'Jansen', '0', 'PJansen@webmail.com');
+
+INSERT INTO `mydb`.`seller`
+(`firstName`,
+`lastName`,
+`blocked`,
+`emailAddress`)
+VALUES
+('Simon', 'Whiteley', '0', 'SRW@webmail.com');
+
+CREATE TABLE `passwords` (
+  `password` varchar(45) DEFAULT NULL,
+  `emailAddress` varchar(45) NOT NULL,
+  PRIMARY KEY (`emailAddress`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `mydb`.`passwords`
+(`password`,
+`emailAddress`)
+VALUES
+('Eline', 'EP@webmail.com');
+
+INSERT INTO `mydb`.`passwords`
+(`password`,
+`emailAddress`)
+VALUES
+('Wim', 'heuffie@webmail.com');
+
+INSERT INTO `mydb`.`passwords`
+(`password`,
+`emailAddress`)
+VALUES
+('Jan', 'JP@webmail.com');
+
+INSERT INTO `mydb`.`passwords`
+(`password`,
+`emailAddress`)
+VALUES
+('Klaas', 'Klaas@webmail.com');
+
+INSERT INTO `mydb`.`passwords`
+(`password`,
+`emailAddress`)
+VALUES
+('Kees', 'KvdB@webmail.com');
+
+INSERT INTO `mydb`.`passwords`
+(`password`,
+`emailAddress`)
+VALUES
+('Laura', 'LA@webmail.com');
+
+INSERT INTO `mydb`.`passwords`
+(`password`,
+`emailAddress`)
+VALUES
+('Martijn', 'MVDH@webmail.com');
+
+INSERT INTO `mydb`.`passwords`
+(`password`,
+`emailAddress`)
+VALUES
+('Piet', 'PJansen@webmail.com');
+
+INSERT INTO `mydb`.`passwords`
+(`password`,
+`emailAddress`)
+VALUES
+('Simon', 'SRW@webmail.com');
+
+INSERT INTO `mydb`.`passwords`
+(`password`,
+`emailAddress`)
+VALUES
+('Truus', 'Truus@webmail.com');
+
+CREATE TABLE `logindata` (
+  `loginNumber` int(11) NOT NULL AUTO_INCREMENT,
+  `emailAddress` varchar(45) DEFAULT NULL,
+  `firstName` varchar(45) DEFAULT NULL,
+  `lastName` varchar(45) DEFAULT NULL,
+  `date` datetime DEFAULT NULL,
+  PRIMARY KEY (`loginNumber`)
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
+
+
+
+
+
