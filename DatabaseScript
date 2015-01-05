@@ -1,6 +1,6 @@
 CREATE DATABASE `mydb` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
-CREATE TABLE `person` (
+CREATE TABLE `mydb`.`person` (
   `firstName` varchar(45) DEFAULT NULL,
   `lastName` varchar(45) DEFAULT NULL,
   `blocked` tinyint(1) DEFAULT NULL,
@@ -36,7 +36,7 @@ INSERT INTO `mydb`.`person`
 VALUES
 ('Truus', 'van de Bovenkamp', '0', '0', 'Truus@webmail.com');
 
-CREATE TABLE `seller` (
+CREATE TABLE `mydb`.`seller` (
   `firstName` varchar(45) DEFAULT NULL,
   `lastName` varchar(45) DEFAULT NULL,
   `blocked` tinyint(1) DEFAULT NULL,
@@ -100,7 +100,7 @@ INSERT INTO `mydb`.`seller`
 VALUES
 ('Simon', 'Whiteley', '0', 'SRW@webmail.com');
 
-CREATE TABLE `passwords` (
+CREATE TABLE `mydb`.`passwords` (
   `password` varchar(45) DEFAULT NULL,
   `emailAddress` varchar(45) NOT NULL,
   PRIMARY KEY (`emailAddress`)
@@ -166,7 +166,7 @@ INSERT INTO `mydb`.`passwords`
 VALUES
 ('Truus', 'Truus@webmail.com');
 
-CREATE TABLE `logindata` (
+CREATE TABLE `mydb`.`logindata` (
   `loginNumber` int(11) NOT NULL AUTO_INCREMENT,
   `emailAddress` varchar(45) DEFAULT NULL,
   `firstName` varchar(45) DEFAULT NULL,
